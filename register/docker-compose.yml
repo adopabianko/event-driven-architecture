@@ -1,0 +1,35 @@
+version: '3'
+services:
+  register_app:
+    build: ./
+    container_name: register_app
+    volumes:
+      - ./:/app
+    ports:
+      - 9191:3000
+    restart: always
+    networks:
+      - default
+
+  mongo_register:
+    image: mongo:3.6
+    container_name: mongo_register
+    ports:
+      - 27018:27017
+    restart: always
+    volumes:
+      - ./../database/register_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    networks:
+      - default
+
+volumes:
+  register_data:
+    driver: local
+
+networks:
+  default:
+    external:
+      name: db_network

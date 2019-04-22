@@ -1,0 +1,36 @@
+version: '3'
+services:
+  wirehouse_app:
+    build: ./
+    container_name: wirehouse_app
+    volumes:
+      - ./:/app
+    ports:
+      - 9292:3000
+    restart: always
+    command: ./consumer/register.js
+    networks:
+      - default
+
+  postgres_wirehouse:
+    image: postgres:9.5
+    container_name: postgres_wirehouse
+    ports:
+      - 5433:5432
+    restart: always
+    volumes:
+      - ./../database/postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: secret
+    networks:
+      - default
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  default:
+    external:
+      name: db_network

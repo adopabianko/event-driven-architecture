@@ -1,0 +1,4 @@
+/database
+/register/node_modules/
+/wirehouse/node_modules/
+.DS_Store

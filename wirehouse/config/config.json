@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "root",
+    "password": "secret",
+    "database": "wirehouse",
+    "host": "postgres_wirehouse",
+    "dialect": "postgres"
+  }
+}
