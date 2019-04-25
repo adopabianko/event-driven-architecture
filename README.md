@@ -1,3 +1,3 @@
 # event-driven-architecture
 
-![Image description](Simple Event-Driven Architecture.png)
+![Event Driven Architecture](Simple Event-Driven Architecture.png)
