@@ -1,3 +1,3 @@
 # event-driven-architecture
 
-![alt text](Simple Event-Driven Architecture.png)
+![Alt text](Simple Event-Driven Architecture.png?raw=true "Event Driven Architecture")
