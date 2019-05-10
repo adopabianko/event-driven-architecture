@@ -18,7 +18,6 @@
 - curl -X POST \
   http://localhost:9191/auth/register \
   -H 'Content-Type: application/json' \
-  -H 'Postman-Token: 9d341bcd-dcc9-4eff-ad8f-26db4d45b330' \
   -H 'cache-control: no-cache' \
   -d '{
         "name":"Ado Pabianko",
