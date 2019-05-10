@@ -8,6 +8,8 @@ services:
     ports:
       - 9292:3000
     restart: always
+    links:
+      - postgres_wirehouse
     command: ./consumer/register.js
     networks:
       - default

@@ -10,7 +10,7 @@ router.post('/register', function(req, res, next) {
   var gender = req.body.gender;
   var password = req.body.password;
 
-  console.log(req.body);
+  // console.log(req.body);
 
   // Save data
   Users.create({
