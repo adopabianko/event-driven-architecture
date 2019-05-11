@@ -14,7 +14,11 @@ mongoose.connect('mongodb://root:secret@mongo_register:27017/register', {
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 
+var cors = require('cors');
+
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
