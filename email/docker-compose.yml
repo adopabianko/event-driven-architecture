@@ -1,0 +1,17 @@
+version: '3'
+services:
+  email_app:
+    image: golang:1.8
+    container_name: email_app
+    volumes:
+      - ./:/go/src/email
+    working_dir: /go/src/email
+    command: go run main.go
+    restart: always
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: db_network

@@ -63,36 +63,105 @@ export default class Register extends React.Component {
 
   render() {
     return (
-      <div className="row justify-content-md-center">
+      <div
+        className="row justify-content-md-center"
+        style={{ marginTop: '70px' }}
+      >
         <div className="col-md-4">
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" className="form-control" id="name" placeholder="Name" onChange={this.handleChangeName}/>
+          <div className="card">
+            <div className="card-header">Register</div>
+            <div className="card-body">
+              <form onSubmit={this.handleSubmit}>
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    id="name"
+                    placeholder="Name"
+                    onChange={this.handleChangeName}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control"
+                    id="email"
+                    placeholder="Email"
+                    onChange={this.handleChangeEmail}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="handphone">Handphone</label>
+                  <input
+                    type="text"
+                    name="handphone"
+                    className="form-control"
+                    id="handphone"
+                    placeholder="Handphone"
+                    onChange={this.handleChangeHandphone}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="gender">Gender</label>
+                  <br />
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="1"
+                    id="gender"
+                    placeholder="Gender"
+                    onChange={this.handleChangeGender}
+                    required
+                  />{' '}
+                  Male &nbsp;
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="2"
+                    id="gender"
+                    placeholder="Gender"
+                    onChange={this.handleChangeGender}
+                    required
+                  />{' '}
+                  Female
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    className="form-control"
+                    id="password"
+                    placeholder="Password"
+                    onChange={this.handleChangePassword}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password_repeat">Password Repeat</label>
+                  <input
+                    type="password"
+                    name="password_repeat"
+                    className="form-control"
+                    id="password_repeat"
+                    placeholder="Password Repeat"
+                    onChange={this.handleChangePasswordRepeat}
+                    required
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary btn-block">
+                  Register
+                </button>
+              </form>
             </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" className="form-control" id="email" placeholder="Email" onChange={this.handleChangeEmail}/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="handphone">Handphone</label>
-              <input type="text" name="handphone" className="form-control" id="handphone" placeholder="Handphone" onChange={this.handleChangeHandphone}/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="gender">Gender</label><br/>
-              <input type="radio" name="gender" value="1" id="gender" placeholder="Gender" onChange={this.handleChangeGender}/> Male &nbsp;
-              <input type="radio" name="gender" value="2" id="gender" placeholder="Gender" onChange={this.handleChangeGender}/> Female
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" name="password" className="form-control" id="password" placeholder="Password" onChange={this.handleChangePassword}/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="password_repeat">Password Repeat</label>
-              <input type="password" name="password_repeat" className="form-control" id="password_repeat" placeholder="Password Repeat" onChange={this.handleChangePasswordRepeat}/>
-            </div>
-            <button type="submit" className="btn btn-primary btn-block">Register</button>
-          </form>
+          </div>
         </div>
       </div>
     );

@@ -20,6 +20,13 @@ var userSchema = new Schema({
     type: Number,
     required: true
   },
+  activation_code: {
+    type: Number,
+    required: true
+  },
+  activation_at: {
+    type: Date
+  },
   password: {
     type: String,
     required: true
@@ -29,8 +36,7 @@ var userSchema = new Schema({
     default: Date.now
   },
   updated_at: {
-    type: Date,
-    default: Date.now
+    type: Date
   }
 });
 
