@@ -7,7 +7,7 @@ services:
       - ./:/app
     ports:
       - 9191:3000
-    restart: always
+    # restart: always
     links:
       - mongo_register
     networks:
@@ -18,7 +18,7 @@ services:
     container_name: mongo_register
     ports:
       - 27018:27017
-    restart: always
+    # restart: always
     volumes:
       - ./../database/register_data:/data/db
     environment:
